@@ -1,0 +1,12 @@
+*{
+    allign-items: center;
+}
+p{
+    color:red
+}
+
+img {
+    width: 50%;
+    height: 50%;
+   position: center;
+}
