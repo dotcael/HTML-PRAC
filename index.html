@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liminial by Cael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Liminial<span> by Cael</span></div>
+      
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button class="login-btn" onclick="showLogin()">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Slideshow -->
+  <section id="home" class="hero">
+    <div id="slides" class="slides-container"></div>
+    <div class="hero-content">
+      <h1>Wherever Whenever</h1>
+      <p>We Provide Security Personnel and Entourage Whenever, Wherever</p>
+      <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Get a Quote
+      </button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🎨</div>
+          <h3>24/7 Security</h3>
+          <p>Professional security personnel available around the clock for any event or location.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">📱</div>
+          <h3>Entourage</h3>
+          <p>Professional entourage services for high-profile individuals and events.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🌐</div>
+          <h3>Event Support</h3>
+          <p>Specialized support for events, including security coordination and logistics management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Start Your Journey</h2>
+      <form id="contactForm">
+        <input type="text"    placeholder=" Name"    required>
+        <input type="email"   placeholder="Email"        required>
+        <select required>
+          <option value="" disabled selected>What do you need?</option>
+          <option>Entourage</option>
+          <option>Security</option>
+          <option>Event Support</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="" rows="5" required></textarea>
+        <button type="submit" class="cta-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Liminal – Kigali, Rwanda</p>
+    </div>
+  </footer>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideLogin()">&times;</span>
+      <h2>Sign In</h2>
+      <form onsubmit="handleLogin(event)">
+        <input type="email"    id="loginEmail"    placeholder="Email"    value="demo@Liminal.rw" required>
+        <input type="password" id="loginPassword" placeholder="Password" value="demo123" required>
+        <button type="submit" class="cta-btn">Login</button>
+      </form>
+      <p class="small">Don't have an account? <a href="#">Request access</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
